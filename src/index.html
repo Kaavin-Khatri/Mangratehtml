@@ -1,159 +1,184 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mangrate</title>
-    <link rel="icon" type="image/x-icon" href="Images/favicon-removebg-preview.png">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"> 
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>  
-    <style>
-      body {
-        padding-bottom: auto;
-        padding-top: auto;
-      }
-      .jumbotron {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px;
-            border-radius : 50px;
-        }
-      img {
-        max-width: 100%;
-      }
-      a{
-        text-decoration: none;
-      }
-      a:hover{
-        color:rgb(255, 255, 255)
-      }
-      .row{
-        text-align:justify; 
 
-      }
-      .col-md-3 mb-2 mb-md-0{
-        position: sticky;
-      }
-      .img-fluid{
-        padding-left: 18px;
-      }
-      .titles{
-        text-align:justify;
-      }
-      .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #0972db; 
-        padding: 10px 0;.
-        text-align: center;
-        border-top: 1px solid #0977e6; 
-      }
-      .form-control-dark {
-        border-color: var(--bs-gray);
-      }
-      .form-control-dark:focus {
-        border-color: #000000;
-        box-shadow: 0 0 0 .25rem rgb(255, 255, 255);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mangrate</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="Images/favicon-removebg-preview.png">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/headers/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+<style>
+  body {
+    padding-bottom: auto;
+    padding-top: auto;
+  }
 
-      .text-small {
-        font-size: 85%;
-      }
+  .jumbotron {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 50px;
+  }
 
-      .dropdown-toggle:not(:focus) {
-        outline: 0;
-      }
-      header{
-        display: none;
-        background-color: white;
-        z-index: 10px;
-      }
-      .nav-scroller{
-        position: fixed;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+  img {
+    max-width: 100%;
+  }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+  a {
+    text-decoration: none;
+  }
 
-  
+  a:hover {
+    color: rgb(255, 255, 255)
+  }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+  .row {
+    text-align: justify;
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+  }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+  .col-md-3 mb-2 mb-md-0 {
+    position: sticky;
+  }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+  .img-fluid {
+    padding-left: 18px;
+  }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  .titles {
+    text-align: justify;
+  }
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #ff0000;
-        --bs-btn-hover-border-color: #ff0000;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-        --bs-btn-hover-color: #ff0000;
-      }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0972db;
+    padding: 10px 0;
+    . text-align: center;
+    border-top: 1px solid #0977e6;
+  }
 
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+  .form-control-dark {
+    border-color: var(--bs-gray);
+  }
 
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
+  .form-control-dark:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 .25rem rgb(255, 255, 255);
+  }
+
+  .text-small {
+    font-size: 85%;
+  }
+
+  .dropdown-toggle:not(:focus) {
+    outline: 0;
+  }
+
+  header {
+    display: none;
+    background-color: white;
+    z-index: 10px;
+  }
+
+  .nav-scroller {
+    position: fixed;
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #ff0000;
+    --bs-btn-hover-border-color: #ff0000;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+    --bs-btn-hover-color: #ff0000;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+  }
 </style>
 
-    
-    
-  <body>
+<body>
   <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><img src="Images\1.png"/><h1>angrate</h1></svg>
+          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><img src="Images\1.png" />
+            <h1>angrate</h1>
+          </svg>
         </a>
       </div>
 
@@ -177,10 +202,10 @@
 
   <div id="Top_Rated_link" class="container mt-5">
     <div class="jumbotron">
-    <div class="row">
-      <h2 align="center"><b>Top Rated</b></h2>
-      <h3 align="center">The best rated mangas.</h3>
-    </div>
+      <div class="row">
+        <h2 align="center"><b>Top Rated</b></h2>
+        <h3 align="center">The best rated mangas.</h3>
+      </div>
     </div>
   </div>
 
@@ -191,11 +216,16 @@
       </div>
       <div class="col-md-6">
         <h1>One Piece</h1>
-    <h4>Ratings - 5/4.7</h4>
-    <a href="https://chapmanganelo.com/manga-aa88620">Read manga here</a><br>
-    <p><b>Author:</b> Eiichiro Oda</p>
-    <p><b>Description:</b> One Piece is a Japanese manga series written and illustrated by Eiichiro Oda that follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the mythical treasure known as the "One Piece". The story takes place in a fantasy world with a vast sea, many islands, and one continent, filled with pirates, monsters, and treasure. Luffy, a young, optimistic captain with the power to stretch like rubber, sets off from his small village on a perilous journey to become King of the Pirates. Along the way, he'll need to assemble a crew, find a ship, outwit rivals, and outrun the Marines. 
-    </p>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-aa88620">Read manga here</a><br>
+        <p><b>Author:</b> Eiichiro Oda</p>
+        <p><b>Description:</b> One Piece is a Japanese manga series written and illustrated by Eiichiro Oda that follows
+          the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the mythical
+          treasure known as the "One Piece". The story takes place in a fantasy world with a vast sea, many islands, and
+          one continent, filled with pirates, monsters, and treasure. Luffy, a young, optimistic captain with the power
+          to stretch like rubber, sets off from his small village on a perilous journey to become King of the Pirates.
+          Along the way, he'll need to assemble a crew, find a ship, outwit rivals, and outrun the Marines.
+        </p>
       </div>
     </div>
   </div>
@@ -206,52 +236,68 @@
       </div>
       <div class="col-md-6">
         <h1>Naruto</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-ng89900">Read manga here</a><br>
-    <p><b>Author:</b> Masashi Kishimoto</p>
-    <p><b>Description:</b> Naruto is a manga series and TV show about a young boy named Naruto Uzumaki who has a demon fox sealed inside him. Naruto is a problem child at the ninja academy in the Hidden Leaf Village, where he is disliked by the villagers and other ninjas. He is often scolded by his teacher, Iruka Umino, and is so far behind in his studies that his graduation is uncertain. However, Naruto dreams of becoming the leader of the village, known as the Hokage, and the world's greatest ninja. Through hard work and perseverance, Naruto overcomes challenges and earns the respect of others. He finds friendship and love with those who believe in him, and together they become a team to overcome obstacles and become true ninjas.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-ng89900">Read manga here</a><br>
+        <p><b>Author:</b> Masashi Kishimoto</p>
+        <p><b>Description:</b> Naruto is a manga series and TV show about a young boy named Naruto Uzumaki who has a
+          demon fox sealed inside him. Naruto is a problem child at the ninja academy in the Hidden Leaf Village, where
+          he is disliked by the villagers and other ninjas. He is often scolded by his teacher, Iruka Umino, and is so
+          far behind in his studies that his graduation is uncertain. However, Naruto dreams of becoming the leader of
+          the village, known as the Hokage, and the world's greatest ninja. Through hard work and perseverance, Naruto
+          overcomes challenges and earns the respect of others. He finds friendship and love with those who believe in
+          him, and together they become a team to overcome obstacles and become true ninjas.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/chainsaw.jpg" class="img-fluid" alt="chainsaw-man">
       </div>
       <div class="col-md-6">
         <h1>Chainsaw Man</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-dn117633">Read manga here</a><br>
-    <p><b>Author:</b> Tatsuki Fujimoto</p>
-    <p><b>Description:</b> Following a betrayal, a young man left for dead is reborn as a powerful devil-human hybrid after merging with his pet devil and is soon enlisted into an organization dedicated to hunting devils. When his father died, Denji was stuck with a huge debt and no way to pay it back.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-dn117633">Read manga here</a><br>
+        <p><b>Author:</b> Tatsuki Fujimoto</p>
+        <p><b>Description:</b> Following a betrayal, a young man left for dead is reborn as a powerful devil-human
+          hybrid after merging with his pet devil and is soon enlisted into an organization dedicated to hunting devils.
+          When his father died, Denji was stuck with a huge debt and no way to pay it back.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/demon.jpg" class="img-fluid" alt="Demon-Slayer">
       </div>
       <div class="col-md-6">
         <h1>Demon Slayer</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-to107782">Read manga here</a><br>
-    <p><b>Author:</b> Koyoharu Gotouge</p>
-    <p><b>Description:</b> The story follows Tanjiro Kamado, a young boy who becomes a demon slayer to avenge his family after they are slaughtered by demons and his younger sister Nezuko is turned into a demon. Tanjiro and his companions travel the land, slaying demons and training to become stronger while searching for a cure for Nezuko. The demon slayers use specialized breathing techniques called "Breathing Styles" that give them superhuman strength, heightened abilities, and increased resilience to help them fight the demons.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-to107782">Read manga here</a><br>
+        <p><b>Author:</b> Koyoharu Gotouge</p>
+        <p><b>Description:</b> The story follows Tanjiro Kamado, a young boy who becomes a demon slayer to avenge his
+          family after they are slaughtered by demons and his younger sister Nezuko is turned into a demon. Tanjiro and
+          his companions travel the land, slaying demons and training to become stronger while searching for a cure for
+          Nezuko. The demon slayers use specialized breathing techniques called "Breathing Styles" that give them
+          superhuman strength, heightened abilities, and increased resilience to help them fight the demons.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/haikyu.jpg" class="img-fluid" alt="Haikyu">
       </div>
       <div class="col-md-6">
         <h1>Haikyu!!</h1>
-    <h4>Ratings - 5/4.9</h4>
-    <a href="https://chapmanganelo.com/manga-qq88584">Read manga here</a><br>
-    <p><b>Author:</b> Haruichi Furudate</p>
-    <p><b>Description:</b> The story follows Hinata as he overcomes his small stature to play volleyball, inspired by a small professional player nicknamed "Little Giant". In middle school, Hinata recruits enough people to start a volleyball team, even though his school doesn't usually have one for boys. In high school, he joins the volleyball team at Karasuno, the former school of his idol, Little Giant, and ends up playing with his middle school rival, Tobio Kageyama, also known as "The King of the Court".</p>
+        <h4>Ratings - 5/4.9</h4>
+        <a href="https://chapmanganelo.com/manga-qq88584">Read manga here</a><br>
+        <p><b>Author:</b> Haruichi Furudate</p>
+        <p><b>Description:</b> The story follows Hinata as he overcomes his small stature to play volleyball, inspired
+          by a small professional player nicknamed "Little Giant". In middle school, Hinata recruits enough people to
+          start a volleyball team, even though his school doesn't usually have one for boys. In high school, he joins
+          the volleyball team at Karasuno, the former school of his idol, Little Giant, and ends up playing with his
+          middle school rival, Tobio Kageyama, also known as "The King of the Court".</p>
       </div>
     </div>
   </div>
@@ -259,81 +305,102 @@
   <br>
   <div id="shonen_link" class="container mt-5">
     <div class="jumbotron">
-    <div class="row">
-      <h2 align="center"><b>Top rated Shonen Mangas</b></h2>
-      <h3 align="center"><b>What is a shonen manga?</b></h3>
-      <h4 align="center">Shonen manga are comics aimed at young teenage boys, typically featuring action-adventure stories with a male protagonist. They often focus on themes of friendship, perseverance, and overcoming challenges.  Shonen manga frequently involve exciting fights, comedic moments, and clear distinctions between good and evil.</h4>
-    </div>
+      <div class="row">
+        <h2 align="center"><b>Top rated Shonen Mangas</b></h2>
+        <h3 align="center"><b>What is a shonen manga?</b></h3>
+        <h4 align="center">Shonen manga are comics aimed at young teenage boys, typically featuring action-adventure
+          stories with a male protagonist. They often focus on themes of friendship, perseverance, and overcoming
+          challenges. Shonen manga frequently involve exciting fights, comedic moments, and clear distinctions between
+          good and evil.</h4>
+      </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/one-piece.jpg" class="img-fluid" alt="one-piece">
       </div>
       <div class="col-md-6">
         <h1>One Piece</h1>
-    <h4>Ratings - 5/4.7</h4>
-    <a href="https://chapmanganelo.com/manga-aa88620">Read manga here</a><br>
-    <p><b>Author:</b> Eiichiro Oda</p>
-    <p><b>Description:</b> One Piece is a Japanese manga series written and illustrated by Eiichiro Oda that follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the mythical treasure known as the "One Piece". The story takes place in a fantasy world with a vast sea, many islands, and one continent, filled with pirates, monsters, and treasure. Luffy, a young, optimistic captain with the power to stretch like rubber, sets off from his small village on a perilous journey to become King of the Pirates. Along the way, he'll need to assemble a crew, find a ship, outwit rivals, and outrun the Marines. 
-    </p>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-aa88620">Read manga here</a><br>
+        <p><b>Author:</b> Eiichiro Oda</p>
+        <p><b>Description:</b> One Piece is a Japanese manga series written and illustrated by Eiichiro Oda that follows
+          the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the mythical
+          treasure known as the "One Piece". The story takes place in a fantasy world with a vast sea, many islands, and
+          one continent, filled with pirates, monsters, and treasure. Luffy, a young, optimistic captain with the power
+          to stretch like rubber, sets off from his small village on a perilous journey to become King of the Pirates.
+          Along the way, he'll need to assemble a crew, find a ship, outwit rivals, and outrun the Marines.
+        </p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/naruto.jpg" class="img-fluid" alt="naruto">
       </div>
       <div class="col-md-6">
         <h1>Naruto</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-ng89900">Read manga here</a><br>
-    <p><b>Author:</b> Masashi Kishimoto</p>
-    <p><b>Description:</b> Naruto is a manga series and TV show about a young boy named Naruto Uzumaki who has a demon fox sealed inside him. Naruto is a problem child at the ninja academy in the Hidden Leaf Village, where he is disliked by the villagers and other ninjas. He is often scolded by his teacher, Iruka Umino, and is so far behind in his studies that his graduation is uncertain. However, Naruto dreams of becoming the leader of the village, known as the Hokage, and the world's greatest ninja. Through hard work and perseverance, Naruto overcomes challenges and earns the respect of others. He finds friendship and love with those who believe in him, and together they become a team to overcome obstacles and become true ninjas.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-ng89900">Read manga here</a><br>
+        <p><b>Author:</b> Masashi Kishimoto</p>
+        <p><b>Description:</b> Naruto is a manga series and TV show about a young boy named Naruto Uzumaki who has a
+          demon fox sealed inside him. Naruto is a problem child at the ninja academy in the Hidden Leaf Village, where
+          he is disliked by the villagers and other ninjas. He is often scolded by his teacher, Iruka Umino, and is so
+          far behind in his studies that his graduation is uncertain. However, Naruto dreams of becoming the leader of
+          the village, known as the Hokage, and the world's greatest ninja. Through hard work and perseverance, Naruto
+          overcomes challenges and earns the respect of others. He finds friendship and love with those who believe in
+          him, and together they become a team to overcome obstacles and become true ninjas.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/Bleach-manga-1.png" class="img-fluid" alt="bleach">
       </div>
       <div class="col-md-6">
         <h1>Bleach</h1>
-    <h4>Ratings - 5/4.7</h4>
-    <a href="https://chapmanganelo.com/manga-qq88636">Read manga here</a><br>
-    <p><b>Author:</b> Tite Kubo</p>
-    <p><b>Description:</b> The story follows a teenager named Ichigo Kurosaki who gains the powers of a Soul Reaper, a death personification who fights evil spirits and guides souls to the afterlife.</p>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-qq88636">Read manga here</a><br>
+        <p><b>Author:</b> Tite Kubo</p>
+        <p><b>Description:</b> The story follows a teenager named Ichigo Kurosaki who gains the powers of a Soul Reaper,
+          a death personification who fights evil spirits and guides souls to the afterlife.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/gragon.jpg" class="img-fluid" alt="Draon Ball">
       </div>
       <div class="col-md-6">
         <h1>Dragon Ball</h1>
-    <h4>Ratings - 5/4.7</h4>
-    <a href="https://chapmanganelo.com/manga-me92372">Read manga here</a><br>
-    <p><b>Author:</b> Akira Toriyama</p>
-    <p><b>Description:</b> Dragon Ball, a sprawling adventure series, follows Goku, a monkey-tailed boy with superhuman strength, on his journey from childhood to adulthood. Along the way, he trains in martial arts, explores the world, and teams up with friends to collect seven magical Dragon Balls that grant any wish. Their quest leads them into battles against villains who also seek the Dragon Balls for their own desires.</p>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-me92372">Read manga here</a><br>
+        <p><b>Author:</b> Akira Toriyama</p>
+        <p><b>Description:</b> Dragon Ball, a sprawling adventure series, follows Goku, a monkey-tailed boy with
+          superhuman strength, on his journey from childhood to adulthood. Along the way, he trains in martial arts,
+          explores the world, and teams up with friends to collect seven magical Dragon Balls that grant any wish. Their
+          quest leads them into battles against villains who also seek the Dragon Balls for their own desires.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/hero.jpg" class="img-fluid" alt="My Hero Acedemia">
       </div>
       <div class="col-md-6">
         <h1>My Hero Academia</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-jq89184">Read manga here</a><br>
-    <p><b>Author:</b> Kohei Horikoshi</p>
-    <p><b>Description:</b> In My Hero Academia, the world teems with "Quirks," superpowers that most people possess. Izuku Midoriya, a quirkless boy with superhero dreams, is unexpectedly gifted a powerful quirk by the world's greatest hero. Now enrolled at U.A. High, a school for aspiring heroes, Izuku trains alongside classmates to hone his abilities, all while facing off against villains and learning the true meaning of heroism.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-jq89184">Read manga here</a><br>
+        <p><b>Author:</b> Kohei Horikoshi</p>
+        <p><b>Description:</b> In My Hero Academia, the world teems with "Quirks," superpowers that most people possess.
+          Izuku Midoriya, a quirkless boy with superhero dreams, is unexpectedly gifted a powerful quirk by the world's
+          greatest hero. Now enrolled at U.A. High, a school for aspiring heroes, Izuku trains alongside classmates to
+          hone his abilities, all while facing off against villains and learning the true meaning of heroism.</p>
       </div>
     </div>
   </div>
@@ -341,80 +408,102 @@
   <br>
   <div id="Slice Of Life_link" class="container mt-5">
     <div class="row">
-    <div class="jumbotron">
-    <h2 align="center">Top rated slice of life mangas.</h2>
-    <h3 align="center"><b>What is a slice of life manga?</b></h3>
-    <h4 align="center">Slice of life manga dives into the everyday experiences of regular people. Unlike action-packed adventures, these stories focus on the joys and challenges of daily life, whether it's navigating school friendships, exploring hobbies, or simply the humor of everyday situations. They aim to create a relatable and heartwarming atmosphere, letting you relax and connect with the characters' ordinary lives.</h4>
+      <div class="jumbotron">
+        <h2 align="center">Top rated slice of life mangas.</h2>
+        <h3 align="center"><b>What is a slice of life manga?</b></h3>
+        <h4 align="center">Slice of life manga dives into the everyday experiences of regular people. Unlike
+          action-packed adventures, these stories focus on the joys and challenges of daily life, whether it's
+          navigating school friendships, exploring hobbies, or simply the humor of everyday situations. They aim to
+          create a relatable and heartwarming atmosphere, letting you relax and connect with the characters' ordinary
+          lives.</h4>
+      </div>
     </div>
   </div>
-  </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/nagatoro.jpg" class="img-fluid" alt="Dont toy with me miss Nagatoro">
       </div>
       <div class="col-md-6">
         <h1>Don't Toy With Me, Miss Nagatoro</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-ml126657">Read manga here</a><br>
-    <p><b>Author:</b> Nanashi</p>
-    <p><b>Description:</b> "Don't Toy With Me, Miss Nagatoro" centers around Hayase Nagatoro, a mischievous freshman who takes great pleasure in teasing her timid senior art club member, Senpai. Despite her relentless teasing, which often leaves Senpai flustered and exasperated, Nagatoro's playful jabs push him outside his comfort zone and help him grow. The story explores their unusual dynamic, with hints that Nagatoro's teasing might mask deeper feelings.</p> 
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-ml126657">Read manga here</a><br>
+        <p><b>Author:</b> Nanashi</p>
+        <p><b>Description:</b> "Don't Toy With Me, Miss Nagatoro" centers around Hayase Nagatoro, a mischievous freshman
+          who takes great pleasure in teasing her timid senior art club member, Senpai. Despite her relentless teasing,
+          which often leaves Senpai flustered and exasperated, Nagatoro's playful jabs push him outside his comfort zone
+          and help him grow. The story explores their unusual dynamic, with hints that Nagatoro's teasing might mask
+          deeper feelings.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/teasing.jpg" class="img-fluid" alt="Teasing Master Takagaki San">
       </div>
       <div class="col-md-6">
         <h1>Teasing Master Takagi-san</h1>
-    <h4>Ratings - 5/4.9</h4>
-    <a href="https://chapmanganelo.com/manga-sd90371">Read manga here</a><br>
-    <p><b>Author:</b> Soichiro Yamamoto</p>
-    <p><b>Description:</b> Teasing Master Takagi-san follows Nishikata, a middle schooler constantly flustered by his classmate Takagi. Takagi is a master of playful teasing, using jokes and pranks to get a rise out of Nishikata. He vows revenge, but his attempts to turn the tables always backfire thanks to Takagi's cunning and Nishikata's own flustered reactions. Though their dynamic seems antagonistic, their playful teasing hints at a deeper connection that slowly blossoms throughout the story.</p>
+        <h4>Ratings - 5/4.9</h4>
+        <a href="https://chapmanganelo.com/manga-sd90371">Read manga here</a><br>
+        <p><b>Author:</b> Soichiro Yamamoto</p>
+        <p><b>Description:</b> Teasing Master Takagi-san follows Nishikata, a middle schooler constantly flustered by
+          his classmate Takagi. Takagi is a master of playful teasing, using jokes and pranks to get a rise out of
+          Nishikata. He vows revenge, but his attempts to turn the tables always backfire thanks to Takagi's cunning and
+          Nishikata's own flustered reactions. Though their dynamic seems antagonistic, their playful teasing hints at a
+          deeper connection that slowly blossoms throughout the story.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/loveiswar.jpg" class="img-fluid" alt="Love is war">
       </div>
       <div class="col-md-6">
         <h1>Kaguya-sama: Love Is War</h1>
-    <h4>Ratings - 5/4.9</h4>
-    <a href="https://w1.kaguyasama.online/">Read manga here</a><br>
-    <p><b>Author:</b> Aka Akasaka</p>
-    <p><b>Description:</b> Kaguya-sama: Love is War is a romantic comedy where two prideful student council geniuses, Kaguya Shinomiya and Miyuki Shirogane, are both smitten with each other. However,  caught in a twisted web of pride and social status, they engage in an elaborate "war" of schemes and manipulation, determined to be the one to trick the other into confessing their love first.</p>
+        <h4>Ratings - 5/4.9</h4>
+        <a href="https://w1.kaguyasama.online/">Read manga here</a><br>
+        <p><b>Author:</b> Aka Akasaka</p>
+        <p><b>Description:</b> Kaguya-sama: Love is War is a romantic comedy where two prideful student council
+          geniuses, Kaguya Shinomiya and Miyuki Shirogane, are both smitten with each other. However, caught in a
+          twisted web of pride and social status, they engage in an elaborate "war" of schemes and manipulation,
+          determined to be the one to trick the other into confessing their love first.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/Yotsuba.png" class="img-fluid" alt="Yotsuba">
       </div>
       <div class="col-md-6">
         <h1>Yotsuba&!</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-xe90898">Read manga here</a><br>
-    <p><b>Author:</b> 	Azuma Kiyohiko</p>
-    <p><b>Description:</b> Yotsuba&! follows the heartwarming adventures of Yotsuba, a wide-eyed and energetic five-year-old, as she explores her new neighborhood with childlike wonder. Completely new to everyday experiences, Yotsuba's innocence and boundless curiosity lead to hilarious situations as she learns about the world with the help of her adoptive father, their friendly neighbors, and the adventures they share.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-xe90898">Read manga here</a><br>
+        <p><b>Author:</b> Azuma Kiyohiko</p>
+        <p><b>Description:</b> Yotsuba&! follows the heartwarming adventures of Yotsuba, a wide-eyed and energetic
+          five-year-old, as she explores her new neighborhood with childlike wonder. Completely new to everyday
+          experiences, Yotsuba's innocence and boundless curiosity lead to hilarious situations as she learns about the
+          world with the help of her adoptive father, their friendly neighbors, and the adventures they share.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/barakamon.jpg" class="img-fluid" alt="Barakamon">
       </div>
       <div class="col-md-6">
         <h1>Barakamon</h1>
-    <h4>Ratings - 5/4.9</h4>
-    <a href="https://chapmanganelo.com/manga-wr90863">Read manga here</a><br>
-    <p><b>Author:</b> Satsuki Yoshino</p>
-    <p><b>Description:</b> Barakamon follows Seishu Handa, a hotheaded young calligrapher exiled to a remote island village after punching a critic. Forced to adapt to the island's laid-back lifestyle and its energetic residents, Seishu finds his uptight city ways challenged by the warmth and eccentricities of his new neighbors. Through their interactions, Seishu rediscovers his passion for calligraphy and learns valuable lessons about life and art.</p>
+        <h4>Ratings - 5/4.9</h4>
+        <a href="https://chapmanganelo.com/manga-wr90863">Read manga here</a><br>
+        <p><b>Author:</b> Satsuki Yoshino</p>
+        <p><b>Description:</b> Barakamon follows Seishu Handa, a hotheaded young calligrapher exiled to a remote island
+          village after punching a critic. Forced to adapt to the island's laid-back lifestyle and its energetic
+          residents, Seishu finds his uptight city ways challenged by the warmth and eccentricities of his new
+          neighbors. Through their interactions, Seishu rediscovers his passion for calligraphy and learns valuable
+          lessons about life and art.</p>
       </div>
     </div>
   </div>
@@ -422,68 +511,87 @@
   <br>
   <div id="shoujo_link" class="container mt-5">
     <div class="row">
-    <div class="jumbotron">
-    <h2 align="center">Top rated shoujo mangas.</h2>
-    <h3 align="center"><b>What is a shoujo manga?</b></h3>
-    <h4 align="center">Shoujo manga literally translates to "girls' comics" and refers to comics aimed at an audience of adolescent girls and young adult women.  While romance is a popular theme, shoujo manga encompasses a wide range of genres, from fantasy and drama to slice-of-life stories.  The focus is typically on character development, emotions, and relationships, featuring protagonists readers can connect with.</h4>
+      <div class="jumbotron">
+        <h2 align="center">Top rated shoujo mangas.</h2>
+        <h3 align="center"><b>What is a shoujo manga?</b></h3>
+        <h4 align="center">Shoujo manga literally translates to "girls' comics" and refers to comics aimed at an
+          audience of adolescent girls and young adult women. While romance is a popular theme, shoujo manga encompasses
+          a wide range of genres, from fantasy and drama to slice-of-life stories. The focus is typically on character
+          development, emotions, and relationships, featuring protagonists readers can connect with.</h4>
+      </div>
     </div>
   </div>
-  </div>
-  
-  <div id="Test" class="container mt-5">
+
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/skip-beat.jpg" class="img-fluid" alt="Skip beat">
       </div>
       <div class="col-md-6">
         <h1>Skip Beat!</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-sg90400">Read manga here</a><br>
-    <p><b>Author:</b> Yoshiki Nakamura</p>
-    <p><b>Description:</b> Skip Beat! follows Kyoko, a betrayed young woman who discovers her childhood crush only used her as a maid to chase pop idol stardom. Furious, she vows revenge – not through violence, but by surpassing him in the ruthless world of show business. Kyoko reinvents herself as a sassy, fiery character named "Love Me" and embarks on a hilarious and heartwarming journey of self-discovery, fueled by revenge and a desire to prove herself. 
-    </p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-sg90400">Read manga here</a><br>
+        <p><b>Author:</b> Yoshiki Nakamura</p>
+        <p><b>Description:</b> Skip Beat! follows Kyoko, a betrayed young woman who discovers her childhood crush only
+          used her as a maid to chase pop idol stardom. Furious, she vows revenge – not through violence, but by
+          surpassing him in the ruthless world of show business. Kyoko reinvents herself as a sassy, fiery character
+          named "Love Me" and embarks on a hilarious and heartwarming journey of self-discovery, fueled by revenge and a
+          desire to prove herself.
+        </p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/aoharu.jpg" class="img-fluid" alt="Aoharu">
       </div>
       <div class="col-md-6">
         <h1>Ao Haru Ride</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-qt90213">Read manga here</a><br>
-    <p><b>Author:</b> Io Sakisaka</p>
-    <p><b>Description:</b> Ao Haru Ride, also known as Blue Spring Ride, follows Futaba Yoshioka, a high school girl who ditches her girly side to fit in. When she reunites with her first love, Kou, who mysteriously transferred schools in middle school, she's shocked to find him colder and distant. As they navigate their rekindled connection, Futaba uncovers the reason behind Kou's change and together they try to heal past hurts and rediscover their feelings for each other.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-qt90213">Read manga here</a><br>
+        <p><b>Author:</b> Io Sakisaka</p>
+        <p><b>Description:</b> Ao Haru Ride, also known as Blue Spring Ride, follows Futaba Yoshioka, a high school girl
+          who ditches her girly side to fit in. When she reunites with her first love, Kou, who mysteriously transferred
+          schools in middle school, she's shocked to find him colder and distant. As they navigate their rekindled
+          connection, Futaba uncovers the reason behind Kou's change and together they try to heal past hurts and
+          rediscover their feelings for each other.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/maid.jpg" class="img-fluid" alt="Maid">
       </div>
       <div class="col-md-6">
         <h1>Kaichou Wa Maid-Sama!</h1>
-    <h4>Ratings - 5/4.6</h4>
-    <a href="https://chapmanganelo.com/manga-kt92239">Read manga here</a><br>
-    <p><b>Author:</b> Fujiwara Hiro</p>
-    <p><b>Description:</b> At Seika High, a formerly all-boys school now with a low female population, Misaki Ayuzawa, the tough-as-nails student council president, enforces strict rules to protect the girls.  However, by day, this "demon dictator" secretly works at a maid cafe to support her family. When the popular and mischievous Takumi Usui discovers her secret identity, instead of exposing it, he becomes a regular (much to Misaki's dismay), leading to a hilarious romantic comedy with a double life twist.</p>
+        <h4>Ratings - 5/4.6</h4>
+        <a href="https://chapmanganelo.com/manga-kt92239">Read manga here</a><br>
+        <p><b>Author:</b> Fujiwara Hiro</p>
+        <p><b>Description:</b> At Seika High, a formerly all-boys school now with a low female population, Misaki
+          Ayuzawa, the tough-as-nails student council president, enforces strict rules to protect the girls. However, by
+          day, this "demon dictator" secretly works at a maid cafe to support her family. When the popular and
+          mischievous Takumi Usui discovers her secret identity, instead of exposing it, he becomes a regular (much to
+          Misaki's dismay), leading to a hilarious romantic comedy with a double life twist.</p>
       </div>
     </div>
   </div>
-  <div id="Test" class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/yona.jpg" class="img-fluid" alt="Yona">
       </div>
       <div class="col-md-6">
         <h1>Akatsuki No Yona</h1>
-    <h4>Ratings - 5/3.8</h4>
-    <a href="https://chapmanganelo.com/manga-lh89753">Read manga here</a><br>
-    <p><b>Author:</b> Kusanagi Mizuho</p>
-    <p><b>Description:</b> In Akatsuki no Yona (Yona of the Dawn), sheltered princess Yona's world crumbles when her beloved cousin stages a coup, killing her father. Forced to flee with her loyal bodyguard Hak, Yona embarks on a journey to find the legendary Four Dragons, warriors bound by an ancient oath to protect her. As she sheds her naivety, Yona learns to fight for herself and her kingdom, encountering romance, political intrigue, and the burden of a hidden destiny.</p>
+        <h4>Ratings - 5/3.8</h4>
+        <a href="https://chapmanganelo.com/manga-lh89753">Read manga here</a><br>
+        <p><b>Author:</b> Kusanagi Mizuho</p>
+        <p><b>Description:</b> In Akatsuki no Yona (Yona of the Dawn), sheltered princess Yona's world crumbles when her
+          beloved cousin stages a coup, killing her father. Forced to flee with her loyal bodyguard Hak, Yona embarks on
+          a journey to find the legendary Four Dragons, warriors bound by an ancient oath to protect her. As she sheds
+          her naivety, Yona learns to fight for herself and her kingdom, encountering romance, political intrigue, and
+          the burden of a hidden destiny.</p>
       </div>
     </div>
   </div>
@@ -494,10 +602,13 @@
       </div>
       <div class="col-md-6">
         <h1>Hori-San To Miyamura-Kun</h1>
-    <h4>Ratings - 5/4.0</h4>
-    <a href="https://chapmanganelo.com/manga-lm100480">Read manga here</a><br>
-    <p><b>Author:</b> Hiroki Adachi</p>
-    <p><b>Description:</b> Hori-san to Miyamura-kun is a sweet romance following Kyouko Hori, a popular high school girl who hides her homebody side, and Izumi Miyamura, a seemingly nerdy classmate who secretly sports piercings and tattoos.  Their contrasting public and private lives collide when they encounter each other outside of school, leading to a secret pact and the blossoming of a unique and heartwarming relationship.</p>
+        <h4>Ratings - 5/4.0</h4>
+        <a href="https://chapmanganelo.com/manga-lm100480">Read manga here</a><br>
+        <p><b>Author:</b> Hiroki Adachi</p>
+        <p><b>Description:</b> Hori-san to Miyamura-kun is a sweet romance following Kyouko Hori, a popular high school
+          girl who hides her homebody side, and Izumi Miyamura, a seemingly nerdy classmate who secretly sports
+          piercings and tattoos. Their contrasting public and private lives collide when they encounter each other
+          outside of school, leading to a secret pact and the blossoming of a unique and heartwarming relationship.</p>
       </div>
     </div>
   </div>
@@ -505,27 +616,36 @@
   <br>
   <div id="Isekai_link" class="container mt-5">
     <div class="row">
-    <div class="jumbotron">
-    <div class="titles">
-      <h2 align="center">Top rated isekai mangas.</h2>
-      <h3 align="center"><b>What is a isekai manga?</b></h3>
-      <h4 align="center">Isekai manga is a subgenre of fantasy where an ordinary person gets whisked away to a different world. This "other world" can be a fantasy realm filled with magic and monsters, a video game world come to life, or even a parallel universe. The story typically follows the protagonist's struggles to adapt and survive in this new environment, often using knowledge or skills from their original world to their advantage. Isekai manga frequently features overpowered protagonists and explores themes of adventure, self-discovery, and building a new life in a strange land.</h4>
-    </div>
-    </div>
+      <div class="jumbotron">
+        <div class="titles">
+          <h2 align="center">Top rated isekai mangas.</h2>
+          <h3 align="center"><b>What is a isekai manga?</b></h3>
+          <h4 align="center">Isekai manga is a subgenre of fantasy where an ordinary person gets whisked away to a
+            different world. This "other world" can be a fantasy realm filled with magic and monsters, a video game
+            world come to life, or even a parallel universe. The story typically follows the protagonist's struggles to
+            adapt and survive in this new environment, often using knowledge or skills from their original world to
+            their advantage. Isekai manga frequently features overpowered protagonists and explores themes of adventure,
+            self-discovery, and building a new life in a strange land.</h4>
+        </div>
+      </div>
     </div>
   </div>
-    <div class="container mt-5">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <img src="Images/overlord.jpg" class="img-fluid" alt="Overlord">
       </div>
       <div class="col-md-6">
         <h1>Overlord</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-fh89401">Read manga here</a><br>
-    <p><b>Author:</b> Kugane Maruyama</p>
-    <p><b>Description:</b> Overlord follows Momonga, a player trapped in a virtual world after a popular MMORPG shuts down. Now an undead Overlord in the game, Momonga leads his guild of loyal NPCs (non-playable characters) who have gained sentience. Unsure of the world's reality and yearning for his lost guildmates, Momonga embarks on adventures with his powerful NPC companions, conquering territories and unraveling the secrets of this new world. 
-    </p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-fh89401">Read manga here</a><br>
+        <p><b>Author:</b> Kugane Maruyama</p>
+        <p><b>Description:</b> Overlord follows Momonga, a player trapped in a virtual world after a popular MMORPG
+          shuts down. Now an undead Overlord in the game, Momonga leads his guild of loyal NPCs (non-playable
+          characters) who have gained sentience. Unsure of the world's reality and yearning for his lost guildmates,
+          Momonga embarks on adventures with his powerful NPC companions, conquering territories and unraveling the
+          secrets of this new world.
+        </p>
       </div>
     </div>
   </div>
@@ -536,10 +656,13 @@
       </div>
       <div class="col-md-6">
         <h1>Sword Art Online</h1>
-    <h4>Ratings - 5/4.1</h4>
-    <a href="https://chapmanganelo.com/manga-ng101652">Read manga here</a><br>
-    <p><b>Author:</b> Reki Kawahara</p>
-    <p><b>Description:</b> In Sword Art Online, a VRMMORPG called SAO traps thousands of players inside its fantasy world. With NerveGear helmets that fully immerse them, escape is impossible until they conquer the game's 100 floors. Kirito, a skilled beta tester, fights to survive and free himself alongside Asuna, another player he meets. Their journey is filled with danger, romance, and the struggle to stay human in a virtual world.</p>
+        <h4>Ratings - 5/4.1</h4>
+        <a href="https://chapmanganelo.com/manga-ng101652">Read manga here</a><br>
+        <p><b>Author:</b> Reki Kawahara</p>
+        <p><b>Description:</b> In Sword Art Online, a VRMMORPG called SAO traps thousands of players inside its fantasy
+          world. With NerveGear helmets that fully immerse them, escape is impossible until they conquer the game's 100
+          floors. Kirito, a skilled beta tester, fights to survive and free himself alongside Asuna, another player he
+          meets. Their journey is filled with danger, romance, and the struggle to stay human in a virtual world.</p>
       </div>
     </div>
   </div>
@@ -550,10 +673,14 @@
       </div>
       <div class="col-md-6">
         <h1>Mushoku Tensei: Jobless Reincarnation</h1>
-    <h4>Ratings - 5/4.5</h4>
-    <a href="https://chapmanganelo.com/manga-qm88732">Read manga here</a><br>
-    <p><b>Author:</b> Rifujin na Magonote</p>
-    <p><b>Description:</b> Mushoku Tensei: Jobless Reincarnation tells the story of a regret-filled shut-in who dies and is reborn in a magical world with all his memories intact. Determined to make the most of his second chance, he dives into his new life as Rudeus Greyrat, training in magic and forging bonds with a quirky cast of characters. But Rudeus's past traumas and perverted tendencies create challenges as he embarks on an epic journey of growth and self-discovery in this fantastical world.</p>
+        <h4>Ratings - 5/4.5</h4>
+        <a href="https://chapmanganelo.com/manga-qm88732">Read manga here</a><br>
+        <p><b>Author:</b> Rifujin na Magonote</p>
+        <p><b>Description:</b> Mushoku Tensei: Jobless Reincarnation tells the story of a regret-filled shut-in who dies
+          and is reborn in a magical world with all his memories intact. Determined to make the most of his second
+          chance, he dives into his new life as Rudeus Greyrat, training in magic and forging bonds with a quirky cast
+          of characters. But Rudeus's past traumas and perverted tendencies create challenges as he embarks on an epic
+          journey of growth and self-discovery in this fantastical world.</p>
       </div>
     </div>
   </div>
@@ -564,10 +691,14 @@
       </div>
       <div class="col-md-6">
         <h1>Solo Leveling</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-dr117685">Read manga here</a><br>
-    <p><b>Author:</b> 	Sung-Lak Jang</p>
-    <p><b>Description:</b> In a world plagued by monsters emerging from mysterious dungeons, Sung Jinwoo, the weakest hunter constantly on the verge of death, gets a second chance. After barely surviving a dungeon break, he awakens to a mysterious "System" granting him the unique ability to level up his strength, unlike any other hunter.  As Sung Jinwoo trains relentlessly and conquers increasingly difficult dungeons, he uncovers the secrets of the System, his own power, and the looming threat to humanity.</p>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-dr117685">Read manga here</a><br>
+        <p><b>Author:</b> Sung-Lak Jang</p>
+        <p><b>Description:</b> In a world plagued by monsters emerging from mysterious dungeons, Sung Jinwoo, the
+          weakest hunter constantly on the verge of death, gets a second chance. After barely surviving a dungeon break,
+          he awakens to a mysterious "System" granting him the unique ability to level up his strength, unlike any other
+          hunter. As Sung Jinwoo trains relentlessly and conquers increasingly difficult dungeons, he uncovers the
+          secrets of the System, his own power, and the looming threat to humanity.</p>
       </div>
     </div>
   </div>
@@ -578,10 +709,13 @@
       </div>
       <div class="col-md-6">
         <h1>That Time I Got Reincarnated as a Slime</h1>
-    <h4>Ratings - 5/3.9</h4>
-    <a href="https://chapmanganelo.com/manga-ne127924">Read manga here</a><br>
-    <p><b>Author:</b> Fuse, Mitz Vah</p>
-    <p><b>Description:</b> "That Time I Got Reincarnated as a Slime" follows Satoru Mikami, a salaryman who dies and gets reborn as a slime monster in a fantasy world. Despite his gooey form, Satoru, renamed Rimuru, possesses unique skills and an all-knowing voice in his head. He befriends a powerful, sealed dragon, gains allies, and builds a monster nation where all races can live together in harmony.</p>
+        <h4>Ratings - 5/3.9</h4>
+        <a href="https://chapmanganelo.com/manga-ne127924">Read manga here</a><br>
+        <p><b>Author:</b> Fuse, Mitz Vah</p>
+        <p><b>Description:</b> "That Time I Got Reincarnated as a Slime" follows Satoru Mikami, a salaryman who dies and
+          gets reborn as a slime monster in a fantasy world. Despite his gooey form, Satoru, renamed Rimuru, possesses
+          unique skills and an all-knowing voice in his head. He befriends a powerful, sealed dragon, gains allies, and
+          builds a monster nation where all races can live together in harmony.</p>
       </div>
     </div>
   </div>
@@ -589,171 +723,217 @@
   <br>
   <div id="Mecha_link" class="container mt-5">
     <div class="row">
-    <div class="jumbotron">
-  <div class="titles">
-    <h2 align="center">Top rated mecha mangas.</h2>
-    <h3 align="center"><b>What is a mecha manga?</b></h3>
-    <h4 align="center">Mecha manga is a genre centered around giant robots, often piloted by humans, used in combat.  Stories can range from fantastical battles with super-powered robots defying physics (super robot) to more grounded narratives where mechas are complex machines with limitations (real robot).  Mecha manga explores themes of war, technology's impact on society, and the bond between pilot and machine.</h4>
-  </div>
-  </div>
-  </div>
+      <div class="jumbotron">
+        <div class="titles">
+          <h2 align="center">Top rated mecha mangas.</h2>
+          <h3 align="center"><b>What is a mecha manga?</b></h3>
+          <h4 align="center">Mecha manga is a genre centered around giant robots, often piloted by humans, used in
+            combat. Stories can range from fantastical battles with super-powered robots defying physics (super robot)
+            to more grounded narratives where mechas are complex machines with limitations (real robot). Mecha manga
+            explores themes of war, technology's impact on society, and the bond between pilot and machine.</h4>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/gen.jpg" class="img-fluid" alt="Neon Genysis Evangelion">
-    </div>
-    <div class="col-md-6">
-      <h1>Neon Genesis Evangelion</h1>
-    <h4>Ratings - 5/4.6</h4>
-    <a href="https://chapmanganelo.com/manga-vx110117">Read manga here</a><br>
-    <p><b>Author:</b> Yoshiyuki Sadamoto</p>
-    <p><b>Description:</b> Neon Genesis Evangelion dives into the psyche of Shinji Ikari, a withdrawn teenager forced to pilot a giant bio-mechanical weapon called an Evangelion to fight monstrous beings known as Angels.  Set fifteen years after a global cataclysm, the story explores themes of isolation, depression, and the burden of responsibility, all wrapped in a complex mecha anime with thrilling action sequences. 
-    </p>
-    </div>
-  </div>
-</div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/full.jpg" class="img-fluid" alt="Full Metal Alchemist">
-    </div>
-    <div class="col-md-6">
-      <h1>Fullmetal Alchemist</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-uh93175">Read manga here</a><br>
-    <p><b>Author:</b> Hiromu Arakawa</p>
-    <p><b>Description:</b> Fullmetal Alchemist dives into a world fueled by alchemy, a science allowing matter manipulation.  Edward and Alphonse Elric, alchemist brothers, lose limbs in a forbidden attempt to bring their mother back. Now, Edward, a cyborg with powerful metal limbs, and Alphonse, a soul bound to a suit of armor, embark on a quest for the legendary Philosopher's Stone, the key to restoring their bodies. Their journey becomes a fight for truth, as they uncover a sinister plot that threatens the nation.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/gen.jpg" class="img-fluid" alt="Neon Genysis Evangelion">
+      </div>
+      <div class="col-md-6">
+        <h1>Neon Genesis Evangelion</h1>
+        <h4>Ratings - 5/4.6</h4>
+        <a href="https://chapmanganelo.com/manga-vx110117">Read manga here</a><br>
+        <p><b>Author:</b> Yoshiyuki Sadamoto</p>
+        <p><b>Description:</b> Neon Genesis Evangelion dives into the psyche of Shinji Ikari, a withdrawn teenager
+          forced to pilot a giant bio-mechanical weapon called an Evangelion to fight monstrous beings known as Angels.
+          Set fifteen years after a global cataclysm, the story explores themes of isolation, depression, and the burden
+          of responsibility, all wrapped in a complex mecha anime with thrilling action sequences.
+        </p>
+      </div>
     </div>
   </div>
-</div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/ghost.jpg" class="img-fluid" alt="Ghost In The Shell">
-    </div>
-    <div class="col-md-6">
-      <h1>Ghost in the Shell</h1>
-    <h4>Ratings - 5/4.5</h4>
-    <a href="https://chapmanganelo.com/manga-cs117238">Read manga here</a><br>
-    <p><b>Author:</b> Kinutani Yu</p>
-    <p><b>Description:</b> In Ghost in the Shell, humanity and technology are blurred. Set in a future where the human mind can inhabit cybernetic bodies, Major Motoko Kusanagi, a cyborg policewoman with a mysterious past, leads a special unit battling cybercrime.  The story delves into philosophical questions about consciousness, identity, and what it means to be human in a world where the lines between flesh and machine are constantly blurring.</p>
-    </div>
-  </div>
-</div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/panic.jpg" class="img-fluid" alt="Fullmetal Panic!">
-    </div>
-    <div class="col-md-6">
-      <h1>Full Metal Panic!</h1>
-    <h4>Ratings - 5/4.7</h4>
-    <a href="https://chapmanganelo.com/manga-un93181">Read manga here</a><br>
-    <p><b>Author:</b> Gatou Shouji</p>
-    <p><b>Description:</b> Full Metal Panic! is a wild ride that mixes high school hijinks with intense military action. Sousuke Sagara, a soldier from a covert anti-terror organization, goes undercover as a high schooler to protect Kaname Chidori, a girl with a mysterious secret. Hilarity ensues as Sousuke's military training clashes with everyday school life, while giant robots and shadowy figures threaten Kaname's safety. Be prepared for explosive action, slapstick comedy, and a dash of romance!</p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/full.jpg" class="img-fluid" alt="Full Metal Alchemist">
+      </div>
+      <div class="col-md-6">
+        <h1>Fullmetal Alchemist</h1>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-uh93175">Read manga here</a><br>
+        <p><b>Author:</b> Hiromu Arakawa</p>
+        <p><b>Description:</b> Fullmetal Alchemist dives into a world fueled by alchemy, a science allowing matter
+          manipulation. Edward and Alphonse Elric, alchemist brothers, lose limbs in a forbidden attempt to bring their
+          mother back. Now, Edward, a cyborg with powerful metal limbs, and Alphonse, a soul bound to a suit of armor,
+          embark on a quest for the legendary Philosopher's Stone, the key to restoring their bodies. Their journey
+          becomes a fight for truth, as they uncover a sinister plot that threatens the nation.</p>
+      </div>
     </div>
   </div>
-</div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/seven.jpg" class="img-fluid" alt="Eureka Seven">
-    </div>
-    <div class="col-md-6">
-      <h1>Eureka Seven</h1>
-    <h4>Ratings - 5/4.7</h4>
-    <a href="https://chapmanganelo.com/manga-di96754">Read manga here</a><br>
-    <p><b>Author:</b> Dai Satō</p>
-    <p><b>Description:</b> Eureka Seven follows Renton, a bored teenager, who stumbles into a life of adventure when a mysterious mecha pilot named Eureka crashes into his life. He joins the ragtag Gekkostate crew, a group of rebels fighting against a repressive government. Piloting the powerful Nirvash mecha with Eureka, Renton gets entangled in a grander mystery involving alien lifeforms (Coralians) and the secrets of his own past. Buckle up for mecha battles, coming-of-age themes, and a unique romance as Renton navigates this thrilling world.</p>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<div id="Adventure_link" class="container mt-5">
-  <div class="row">
-    <div class="jumbotron">
-<div class="titles">
-  <h2 align="center">Top rated adventure mangas.</h2>
-    <h3 align="center"><b>What is a adventure manga?</b></h3>
-    <h4 align="center">Adventure manga follows a protagonist or group on a thrilling journey, often involving exploration, discovery, and overcoming challenges. These challenges can range from physical dangers and puzzles to moral dilemmas, all set in unique and fantastical worlds or our own with a twist.</h4>
-</div>
-  </div>
-</div>
-</div>
-<div class="container mt-5">
-<div class="row">
-  <div class="col-md-6">
-    <img src="Images/hunter.jpg" class="img-fluid" alt="Hunter Hunter">
-  </div>
-  <div class="col-md-6">
-    <h1>1) Hunter x Hunter</h1>
-    <h4>Ratings - 5/4.6</h4>
-    <a href="https://chapmanganelo.com/manga-oc92596">Read manga here</a><br>
-    <p><b>Author:</b> Yoshihiro Togashi</p>
-    <p><b>Description:</b> Hunter x Hunter follows Gon Freecss, a young boy who discovers his missing father is a renowned Hunter, an elite individual who tracks down treasures, rare creatures, and conquers uncharted territories. Gon sets out on a journey to become a Hunter himself, take the challenging Hunter exam, and ultimately find his father, along the way encountering a colorful cast of characters and embarking on exciting adventures. 
-    </p>
-  </div>
-</div>
-</div>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/full.jpg" class="img-fluid" alt="Full Metal Alchemist">
-    </div>
-    <div class="col-md-6">
-      <h1>Fullmetal Alchemist</h1>
-    <h4>Ratings - 5/4.8</h4>
-    <a href="https://chapmanganelo.com/manga-uh93175">Read manga here</a><br>
-    <p><b>Author:</b> Hiromu Arakawa</p>
-    <p><b>Description:</b> Fullmetal Alchemist dives into a world fueled by alchemy, a science allowing matter manipulation.  Edward and Alphonse Elric, alchemist brothers, lose limbs in a forbidden attempt to bring their mother back. Now, Edward, a cyborg with powerful metal limbs, and Alphonse, a soul bound to a suit of armor, embark on a quest for the legendary Philosopher's Stone, the key to restoring their bodies. Their journey becomes a fight for truth, as they uncover a sinister plot that threatens the nation.</p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/ghost.jpg" class="img-fluid" alt="Ghost In The Shell">
+      </div>
+      <div class="col-md-6">
+        <h1>Ghost in the Shell</h1>
+        <h4>Ratings - 5/4.5</h4>
+        <a href="https://chapmanganelo.com/manga-cs117238">Read manga here</a><br>
+        <p><b>Author:</b> Kinutani Yu</p>
+        <p><b>Description:</b> In Ghost in the Shell, humanity and technology are blurred. Set in a future where the
+          human mind can inhabit cybernetic bodies, Major Motoko Kusanagi, a cyborg policewoman with a mysterious past,
+          leads a special unit battling cybercrime. The story delves into philosophical questions about consciousness,
+          identity, and what it means to be human in a world where the lines between flesh and machine are constantly
+          blurring.</p>
+      </div>
     </div>
   </div>
-</div>
-<div id="Test" class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/gragon.jpg" class="img-fluid" alt="Draon Ball">
-    </div>
-    <div class="col-md-6">
-      <h1>Dragon Ball</h1>
-  <h4>Ratings - 5/4.7</h4>
-  <a href="https://chapmanganelo.com/manga-me92372">Read manga here</a><br>
-  <p><b>Author:</b> Akira Toriyama</p>
-  <p><b>Description:</b> Dragon Ball, a sprawling adventure series, follows Goku, a monkey-tailed boy with superhuman strength, on his journey from childhood to adulthood. Along the way, he trains in martial arts, explores the world, and teams up with friends to collect seven magical Dragon Balls that grant any wish. Their quest leads them into battles against villains who also seek the Dragon Balls for their own desires.</p>
-    </div>
-  </div>
-</div>
-<div id="Test" class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/demon.jpg" class="img-fluid" alt="Demon-Slayer">
-    </div>
-    <div class="col-md-6">
-      <h1>Demon Slayer</h1>
-  <h4>Ratings - 5/4.8</h4>
-  <a href="https://chapmanganelo.com/manga-to107782">Read manga here</a><br>
-  <p><b>Author:</b> Koyoharu Gotouge</p>
-  <p><b>Description:</b> The story follows Tanjiro Kamado, a young boy who becomes a demon slayer to avenge his family after they are slaughtered by demons and his younger sister Nezuko is turned into a demon. Tanjiro and his companions travel the land, slaying demons and training to become stronger while searching for a cure for Nezuko. The demon slayers use specialized breathing techniques called "Breathing Styles" that give them superhuman strength, heightened abilities, and increased resilience to help them fight the demons.</p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/panic.jpg" class="img-fluid" alt="Fullmetal Panic!">
+      </div>
+      <div class="col-md-6">
+        <h1>Full Metal Panic!</h1>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-un93181">Read manga here</a><br>
+        <p><b>Author:</b> Gatou Shouji</p>
+        <p><b>Description:</b> Full Metal Panic! is a wild ride that mixes high school hijinks with intense military
+          action. Sousuke Sagara, a soldier from a covert anti-terror organization, goes undercover as a high schooler
+          to protect Kaname Chidori, a girl with a mysterious secret. Hilarity ensues as Sousuke's military training
+          clashes with everyday school life, while giant robots and shadowy figures threaten Kaname's safety. Be
+          prepared for explosive action, slapstick comedy, and a dash of romance!</p>
+      </div>
     </div>
   </div>
-</div>
-<div id="Test" class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <img src="Images/one-piece.jpg" class="img-fluid" alt="one-piece">
-    </div>
-    <div class="col-md-6">
-      <h1>One Piece</h1>
-  <h4>Ratings - 5/4.7</h4>
-  <a href="https://chapmanganelo.com/manga-aa88620">Read manga here</a><br>
-  <p><b>Author:</b> Eiichiro Oda</p>
-  <p><b>Description:</b> One Piece is a Japanese manga series written and illustrated by Eiichiro Oda that follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the mythical treasure known as the "One Piece". The story takes place in a fantasy world with a vast sea, many islands, and one continent, filled with pirates, monsters, and treasure. Luffy, a young, optimistic captain with the power to stretch like rubber, sets off from his small village on a perilous journey to become King of the Pirates. Along the way, he'll need to assemble a crew, find a ship, outwit rivals, and outrun the Marines. 
-  </p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/seven.jpg" class="img-fluid" alt="Eureka Seven">
+      </div>
+      <div class="col-md-6">
+        <h1>Eureka Seven</h1>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-di96754">Read manga here</a><br>
+        <p><b>Author:</b> Dai Satō</p>
+        <p><b>Description:</b> Eureka Seven follows Renton, a bored teenager, who stumbles into a life of adventure when
+          a mysterious mecha pilot named Eureka crashes into his life. He joins the ragtag Gekkostate crew, a group of
+          rebels fighting against a repressive government. Piloting the powerful Nirvash mecha with Eureka, Renton gets
+          entangled in a grander mystery involving alien lifeforms (Coralians) and the secrets of his own past. Buckle
+          up for mecha battles, coming-of-age themes, and a unique romance as Renton navigates this thrilling world.</p>
+      </div>
     </div>
   </div>
-</div>
+  <br>
+  <br>
+  <div id="Adventure_link" class="container mt-5">
+    <div class="row">
+      <div class="jumbotron">
+        <div class="titles">
+          <h2 align="center">Top rated adventure mangas.</h2>
+          <h3 align="center"><b>What is a adventure manga?</b></h3>
+          <h4 align="center">Adventure manga follows a protagonist or group on a thrilling journey, often involving
+            exploration, discovery, and overcoming challenges. These challenges can range from physical dangers and
+            puzzles to moral dilemmas, all set in unique and fantastical worlds or our own with a twist.</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/hunter.jpg" class="img-fluid" alt="Hunter Hunter">
+      </div>
+      <div class="col-md-6">
+        <h1>1) Hunter x Hunter</h1>
+        <h4>Ratings - 5/4.6</h4>
+        <a href="https://chapmanganelo.com/manga-oc92596">Read manga here</a><br>
+        <p><b>Author:</b> Yoshihiro Togashi</p>
+        <p><b>Description:</b> Hunter x Hunter follows Gon Freecss, a young boy who discovers his missing father is a
+          renowned Hunter, an elite individual who tracks down treasures, rare creatures, and conquers uncharted
+          territories. Gon sets out on a journey to become a Hunter himself, take the challenging Hunter exam, and
+          ultimately find his father, along the way encountering a colorful cast of characters and embarking on exciting
+          adventures.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/full.jpg" class="img-fluid" alt="Full Metal Alchemist">
+      </div>
+      <div class="col-md-6">
+        <h1>Fullmetal Alchemist</h1>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-uh93175">Read manga here</a><br>
+        <p><b>Author:</b> Hiromu Arakawa</p>
+        <p><b>Description:</b> Fullmetal Alchemist dives into a world fueled by alchemy, a science allowing matter
+          manipulation. Edward and Alphonse Elric, alchemist brothers, lose limbs in a forbidden attempt to bring their
+          mother back. Now, Edward, a cyborg with powerful metal limbs, and Alphonse, a soul bound to a suit of armor,
+          embark on a quest for the legendary Philosopher's Stone, the key to restoring their bodies. Their journey
+          becomes a fight for truth, as they uncover a sinister plot that threatens the nation.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/gragon.jpg" class="img-fluid" alt="Draon Ball">
+      </div>
+      <div class="col-md-6">
+        <h1>Dragon Ball</h1>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-me92372">Read manga here</a><br>
+        <p><b>Author:</b> Akira Toriyama</p>
+        <p><b>Description:</b> Dragon Ball, a sprawling adventure series, follows Goku, a monkey-tailed boy with
+          superhuman strength, on his journey from childhood to adulthood. Along the way, he trains in martial arts,
+          explores the world, and teams up with friends to collect seven magical Dragon Balls that grant any wish. Their
+          quest leads them into battles against villains who also seek the Dragon Balls for their own desires.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/demon.jpg" class="img-fluid" alt="Demon-Slayer">
+      </div>
+      <div class="col-md-6">
+        <h1>Demon Slayer</h1>
+        <h4>Ratings - 5/4.8</h4>
+        <a href="https://chapmanganelo.com/manga-to107782">Read manga here</a><br>
+        <p><b>Author:</b> Koyoharu Gotouge</p>
+        <p><b>Description:</b> The story follows Tanjiro Kamado, a young boy who becomes a demon slayer to avenge his
+          family after they are slaughtered by demons and his younger sister Nezuko is turned into a demon. Tanjiro and
+          his companions travel the land, slaying demons and training to become stronger while searching for a cure for
+          Nezuko. The demon slayers use specialized breathing techniques called "Breathing Styles" that give them
+          superhuman strength, heightened abilities, and increased resilience to help them fight the demons.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/one-piece.jpg" class="img-fluid" alt="one-piece">
+      </div>
+      <div class="col-md-6">
+        <h1>One Piece</h1>
+        <h4>Ratings - 5/4.7</h4>
+        <a href="https://chapmanganelo.com/manga-aa88620">Read manga here</a><br>
+        <p><b>Author:</b> Eiichiro Oda</p>
+        <p><b>Description:</b> One Piece is a Japanese manga series written and illustrated by Eiichiro Oda that follows
+          the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the mythical
+          treasure known as the "One Piece". The story takes place in a fantasy world with a vast sea, many islands, and
+          one continent, filled with pirates, monsters, and treasure. Luffy, a young, optimistic captain with the power
+          to stretch like rubber, sets off from his small village on a perilous journey to become King of the Pirates.
+          Along the way, he'll need to assemble a crew, find a ship, outwit rivals, and outrun the Marines.
+        </p>
+      </div>
+    </div>
+  </div>
+  <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i
+      class="fas fa-chevron-up"></i></a>
   <div class="container">
     <footer class="py-5">
       <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
@@ -762,8 +942,28 @@
     </footer>
   </div>
   <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  <script>
+    $(document).ready(function () {
+      console.log('hello');
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+    });
+  </script>
 </body>
+
 </html>
