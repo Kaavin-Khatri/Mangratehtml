@@ -17,7 +17,7 @@
     padding-bottom: auto;
     padding-top: auto;
   }
-
+  
   .jumbotron {
     background-color: #343a40;
     color: #ffffff;
@@ -60,7 +60,7 @@
     width: 100%;
     background-color: #0972db;
     padding: 10px 0;
-    . text-align: center;
+    text-align: center;
     border-top: 1px solid #0977e6;
   }
 
@@ -930,6 +930,24 @@
       </div>
     </div>
   </div>
+  <div class="container mt-5">
+    <h1 class="text-center">Manga Rating System</h1>
+    <div class="rating" id="rating">
+        <span class="star" data-value="5">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="1">&#9733;</span>
+    </div>
+    <p class="text-center mt-3">Your rating: <span id="selected-rating">0</span> stars</p>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
   <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i
       class="fas fa-chevron-up"></i></a>
   <div class="container">
